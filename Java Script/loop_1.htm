@@ -1,0 +1,56 @@
+
+<input type="text" id="test">
+<button class="btn_1" onclick="loop()">
+    Loop 
+</button>
+
+<ol id="ol">
+
+</ol>
+<ul>
+
+</ul>
+
+
+
+<script>
+        function loop(){
+           let x = document.getElementById("test").value;
+           //SIMPLE FOR LOOP
+            
+           for(i=1 ; i<=5 ; i++){ 
+               document.getElementById("ol").innerHTML += `<li>${x}</li>`;
+               console.log(`${i}${x}`)
+           }
+        }
+
+        // arr = ["apple" ,"orange" , "banana" , "grape" , "pineapple"]
+
+        // for(i=0 ; i<arr.length ; i++){
+        //     document.querySelector("ul").innerHTML +=`<li>${arr[i]}</li>`;
+        // }
+
+        arr2 = ["harry" , "potter" , "is ", "the", "best"]
+        //ARRAY MAP LOOP
+        // arr2.map(function(el,index){
+        //     document.querySelector("ul").innerHTML += `<li>${el} - ${index}</li>`;
+        // })
+        // for(x of arr2){
+        //     document.querySelector("ul").innerHTML +=`<li>${x} for of</li>`;
+        // }
+        // for(x in arr2){
+        //     console.log(`${arr2[x]}`);
+        // }
+
+        let obj = {
+            name : "Aung Si Hien",
+            age : 26,
+            skill: "Developer",
+            status: false,
+
+        }
+        for(x in obj){
+            document.querySelector("ul").innerHTML +=`<li>${x}---${obj[x]}</li>`
+        }
+      
+</script>

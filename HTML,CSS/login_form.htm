@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            background-color: #0e153a;
+            color:#e2f3f5;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+        }
+        
+        .form{
+            width:350px;
+            
+            padding: 20px 20px;
+            margin: 100px auto;
+        
+        }
+        .form legend{
+            text-align:center;
+            font-size:2em;
+        }
+        .form_input_1 label{
+            display: block;
+            margin:10px;
+            font-size:12px;
+        }
+        .form_input_1 input{
+            border:1px solid white;
+            border-radius: 30px;
+            width: 100%;
+            height:30px;
+            background-color: #a1eafb;
+            margin-right:30px;
+            
+            
+        }
+        .button{
+            display: inline-block;
+            margin-bottom:40px;
+            margin-top:40px;
+            margin-right: 20px;
+        }
+        .btn-1{
+            
+            display: inline-block;
+            border:2px solid #88bef5;
+            background-color: cornflowerblue;
+            border-radius: 30px;
+            height:30px;
+            }
+        .color{
+            background-color:cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome from Login Form</h1>
+<form action="#">
+    <fieldset class="form">
+        <legend>
+           <i class="fas fa-lock fa-fw"></i> Login form 
+        </legend>
+        
+            <div class="form_input_1">
+                <label for="email"><i class="fas fa-envelope-square fa-fw"></i>User_name </label>
+                <input type="email" name="email" id="email" autofocus required placeholder="example@gmail.com">
+            </div>
+            <div class="form_input_1">
+                <label for="pwd"><i class="fas fa-key fa-fw"></i>Password </label>
+                <input type="password" name="pwd" id="pwd" >
+            </div>
+            <div class="button">
+                <button class="btn-1">
+                    <i class="fas fa-lock fa-fw color"></i>
+                    Sign In
+                </button>
+                
+            </div>
+            <a href="#">Register in here.</a>
+            
+
+
+
+    </fieldset>
+</form> 
+</body>
+</html>

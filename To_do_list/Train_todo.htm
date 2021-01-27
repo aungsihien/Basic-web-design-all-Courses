@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list-list{
+            display: flex;
+            justify-content: space-between;
+        }
+        .main{
+            width:400px;
+        }
+    </style>
+</head>
+<body>
+        <div class="main">
+            <input type="text" id="text">
+            <button onclick="addList()">click</button>
+            <ul id="ul" class="list">
+            
+            </ul>
+        </div>
+
+        <script>
+            let i = 1;
+            let text = document.getElementById("text");
+            let ul = document.getElementById("ul");
+            function filter(x){
+                if(x){
+                    return x;
+                }else{
+                    alert("Type something");
+                    return false;
+                }
+            }
+            function addList(){
+                let inputText =  filter(text.value);
+                if(inputText){
+                     showList(inputText);
+                    text.value = "";
+                }
+              
+            }   
+            function showList(text){
+                ul.innerHTML +=`<li class="list-list" id="listItem${i}">
+                    <span id="listText${i}">${text}</span>
+                    <div class="btn-group">
+                        <button class="list-edit-btn" id="btnEdit${i}" onclick="fuckList(${i})">Edit</button> 
+                        <button class="list-delete-btn" id="btnDel${i}" onclick="deleteList(${i})">Del</button>  
+                    </div>
+
+                    
+                    </li>`;i++;
+            }
+
+            // function editList(listid){
+            //         console.log("error");
+            //     // let current = document.getElementById(`listText${listid}`);
+               
+            //     // let newText = prompt("Do you want to edit " , current.innerText);
+            // }
+            function fuckList(listid){
+                let current = document.getElementById(`listText${listid}`);
+                let newText = prompt("Do you want to edit " , current.innerText);
+                if(filter(newText)){
+                    return current.innerText = newText;
+                }
+                
+            }
+            function deleteList(listid){
+                let current = document.getElementById(`listItem${listid}`);
+                let deleteConfirm = confirm(`Are you sure you want to delete`);
+                if(deleteConfirm){
+                    ul.removeChild(current);
+                }else{
+                    console.log('not delete');
+                }
+                
+            }
+        </script>
+</body>
+</html>

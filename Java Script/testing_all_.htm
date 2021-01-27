@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h2{
+            width:250px;
+            border: 1px solid black;
+            padding:10px 15px;
+        }
+        input{
+            width:200px;
+
+        }
+        label{
+            display: block;
+            margin-bottom:10px; 
+        }
+        .div1{
+            width: 450px;
+            border:3px solid black;
+            padding:10px 15px;
+            background-color: cyan;
+            display: inline-block;
+            margin-bottom:10px;
+        }
+        .div2{
+            width: 450px;
+            border: 3px solid black;
+            padding: 10px 15px;
+            display: inline-block;
+            margin:20px;
+        }
+        .div3{
+            width: 450px;
+            border: 3px solid black;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h4> If you enter some text,text_color,backgroundColor,text_font in input box , it will show in text box</h4>
+    <h2>Text box</h2>
+    <div >
+        <label for="">Change Text</label>
+        <input type="text" id="test"> 
+        <button id="btn_1" onclick="click1()">Click</button>
+    </div>
+    <div>
+        <label for="">Change tesxt_color</label>
+        <input type="color" id="color"> 
+        <button id="btn_2 " onclick="click2()">Click</button>
+    </div>
+    <div>
+        <label for="">Change backgroundColor</label>
+        <input type="color" id="color2" onchange="tanChange()"> 
+        <!-- <button id="btn_3">Click</button> -->
+    </div>
+    <div>
+        <label for="">Change fontColor</label>
+        <input type="number" id="fontSize"> 
+        <button id="btn_4" onclick="click3()">Click</button>
+    </div>
+    </div>
+    
+    <div class="div2">
+        <div>
+            <h4>If_else</h4>
+            <h4>ZOO is catagorize according to age, pls enter your age , it will show how much cost for entry fee</h4>
+    
+        </div>
+        <div>
+            <label for="">Enter age</label>
+            <input type="text" id="test3">
+            <button id="btn_4" onclick="click4()">Calculate</button>
+        </div>
+        <h4 id="h4"></h4>
+    </div>
+    <div class="div3">
+        <h4>if you enter some text in input box ,it will show 5 time.</h4>
+        <label for="">Enter some text</label>
+        <input type="text" name="" id="test4">
+        <button id="btn_5" onclick="loop()">5times</button>
+        <ul>
+
+        </ul>
+    </div>
+    
+    <script>
+        let result =  document.querySelector("h2");
+        function click1(){
+            let x =  document.getElementById("test").value;
+            result.innerHTML = x;
+            document.getElementById("test").value = "";
+            console.log(`${x}`);
+        }
+        function click2(){
+            let x = document.getElementById("color").value;
+            result.style.color = x;
+
+        }
+        function tanChange(){
+            let x = document.getElementById("color2").value;
+            result.style.backgroundColor = x;
+        }
+        function click3(){
+            let x = document.getElementById("fontSize").value;
+            result.style.fontSize =  x + "px";
+        }
+        function click4(){
+            let x = document.getElementById("test3").value;
+            
+            if(x<=10 && x>0){
+                alert(`Entry fees for ${x} years old is Free`)
+            }else if(x<=20 && x>10){
+                let y = `Entry fees for ${x} years old is 2000`
+                document.getElementById("h4").innerHTML = y;
+            }else if(x<=50 && x>20){
+                let y = `Entry fees for ${x} years old is 3000`
+                document.getElementById("h4").innerHTML = y;
+            }else if(x<=80 && x>50){
+                let y = `Entry fees for ${x} years old is 4000`
+                document.getElementById("h4").innerHTML = y;
+            }else if (x>80){
+                let y = `We don't allow over 80 year old`;
+                document.getElementById("h4").innerHTML = y;
+            }else{
+                document.getElementById("h4").innerHTML = "Pls enter age with number only"
+            }
+
+        }
+        function loop(){
+            let x  = document.getElementById("test4").value;
+
+            for(i=1 ; i<=5 ; i++){
+                document.querySelector("ul").innerHTML +=`<li>${x}</li>`;
+                
+            }
+        }
+
+        let arr = ["orange" , "apple" , "banana" , "grape" , "cucumber"]
+
+        for(i=0; i<arr.length ; i++){
+            console.log(`${arr[i]}`);
+        }
+        let arr2 = ["harry" , "potter" , "is" , "the " ,"best" , "developer"];
+
+        for(x of arr2){
+            console.log(`${x}`);
+        }
+        for(x in arr2){
+            console.log(`${arr[x]}`)
+        }
+
+        let arr3 = ["mg mg " , "aung " , "taung taung" , "laung laung"]
+
+        arr3.map(function(el,index){
+            console.log(`${el}${index}`);
+        })
+
+        let obj = {
+            name : "aung si hein",
+            age : 26,
+            job : "Developer",
+            skill : "saya gyi"
+        }
+        
+        for(x in obj){
+            console.log(`${x} -- ${obj[x]}`)
+        }
+    </script>
+</body>
+</html>

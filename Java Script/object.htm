@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let name = "Aung si hein";
+        
+        function YearToMonth(year){
+            month = year *12;
+            return totalmonth(month);
+        }
+        function totalmonth(result){
+            return `YOur total month for your year is ${result}`;
+        }
+      
+      
+        let myself = {
+            name:"Aung Si Hein",
+            age:26,
+            skill: "learning to become professional Front-end-developer",
+            showAll : function(x = 'abc'){
+                return `my name is ${x}`;
+            }
+        }
+
+        let batman = {
+            name: "Bruce wayne",
+            age: "40",
+            skill: "Ninja, shadow, black and I'm rich",
+            viewer : function(){
+                return `Batman name is ${this.name} , age is ${this.age} and born in ${this.bdYear(this.age)} skill is ${this.skill}`
+            },
+            bdYear : function(age){
+                real_age = 2021 - age;
+                return real_age;
+
+            }
+        }
+       //testing function
+
+       let flash={
+           name: "barry Allen",
+           age: 20,
+           skill : "fast as a light",
+           how:function(){
+               return `flash name is ${this.name} and ${this.why(this.name)} ,flash age is ${this.age} and his skill is `
+           },
+           why:function(name){
+                realname = name + "potter"
+                return realname;
+           }
+       }
+
+       function threetimes(number){
+           three = number *3;
+           return answer(three);
+       }
+
+       function answer(ans){
+            return `The answer is ${ans}`;
+       }
+       
+
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

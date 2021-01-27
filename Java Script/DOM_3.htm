@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h1{
+            border:2px solid black;
+            padding:10px;
+            width:255px;
+        }
+        div{
+            margin-bottom: 10px;
+
+        }
+        input{
+            width:150px;
+            margin-right:5px;
+            height: 30px;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="result">Text</h1>
+    <div>
+        <input type="text" id="text">
+        <button id="btn_1">Set Text</button>
+    </div>
+    <div>
+        <input type="color" id="color" onchange="colorChange()" >
+        <button id="btn_2" >Set color</button>
+    </div>
+    <div>
+        <input type="number" id="fontSize">
+        <button id="btn_3" onclick="change()">Set fontSize</button>
+    </div>
+    <div>
+        <input type="text" id="test2">
+        <button id ="btn_4" onclick="showHere()">Show here</button>
+    </div>
+    <ul id="para">
+        <li id="para1"></li>
+    </p>
+    <script>
+
+        let result = document.getElementById("result");
+        document.getElementById("btn_1").onclick = function (){ // property ko access lote tar
+             let x = document.getElementById("text").value;
+             result.innerHTML= x;
+             document.getElementById("text").value = "";
+             console.log(`Change to ${x}`);
+            
+        }
+        document.getElementById("btn_2").addEventListener("click" , function(){ //method assign lote tar
+           let x = document.getElementById("color").value;
+            result.style.color = x;
+            console.log(`Change to ${x}`);
+        })
+        function change(){
+            let x= document.getElementById("fontSize").value;//attribute assign lote tar
+            result.style.fontSize = x +"px";
+            console.log(`Change to ${x}`);
+        }
+
+       function colorChange(){
+            let x = document.getElementById("color").value;
+            result.style.color = x;
+            console.log(`Change to ${x}`);
+       }
+       function showHere(){
+           let x = document.getElementById("test2").value;
+           document.getElementById("para1").innerHTML = x ; 
+           console.log(`success ${x}`)
+       }
+        
+    </script>
+    
+</body>
+</html>

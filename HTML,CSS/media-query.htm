@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        .box{
+            width:300px;
+           
+            padding:10px;
+            text-align: justify;
+            background-color: grey;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+       @media screen and (max-width: 400px){
+           .box{
+               background-color: blue;
+           }
+       }
+       @media screen and (max-width: 380px) {
+           .box{
+               background-color: red;
+           }
+           
+       }
+       @media screen and (max-width: 790px){
+           .box{
+               width:500px;
+               background-color: chartreuse;
+           }
+       }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>This is Text Box</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, veniam? Non recusandae odit, similique quos voluptate eius nemo facere et. Placeat molestias vero nesciunt itaque non error veniam vitae velit!</p>
+
+    </div>
+    <div class="box">
+        <h1>This is Text Box</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, veniam? Non recusandae odit, similique quos voluptate eius nemo facere et. Placeat molestias vero nesciunt itaque non error veniam vitae velit!</p>
+
+    </div>
+    <div class="box">
+        <h1>This is Text Box</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, veniam? Non recusandae odit, similique quos voluptate eius nemo facere et. Placeat molestias vero nesciunt itaque non error veniam vitae velit!</p>
+
+    </div>
+    
+</body>
+</html>

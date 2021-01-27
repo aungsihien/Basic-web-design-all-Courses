@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <title>Document</title>
+    <style>
+        *{
+            font-family:sans-serif;
+            color:#3d6cb9;
+            box-sizing: border-box;
+            
+        }
+        body{
+            background-color: #010a0c;
+        }
+        .login-form{
+            width:350px;
+            border:2px solid #00fff0;
+            padding:20px;
+            border-radius: 10px;
+            margin:120px auto;
+        }
+        .form-input{
+            margin-bottom:20px;
+        }
+        .btn{
+            border-radius: 10px;
+            padding: 10px 15px;
+            border:2px solid #00fff0;
+            background-color: #00fff0;
+            margin-right:100px;
+        }
+        .form-input label{
+            display: block;
+            margin-bottom:10px;
+        }
+        .form-input input{
+            display:block;
+            width:100%;
+            border-radius: 10px;
+            padding: 10px 15px;
+            border:2px solid #00fff0;
+            background-color: #fafaf6;
+        }
+        .text-light{
+            color:#fafaf6;
+        }
+        .login-form legend{
+            font-size:2em;
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset class="login-form">
+            <legend>
+                <i class="fas fa-lock fa-fw text-light"></i>
+                Login form
+            </legend>
+            <div class="form-input">
+                <label for="username" class="text-light"><i class="fas fa-users fa-fw text-light"></i> Username</label>
+                <input type="text">
+            </div>
+            <div class="form-input">
+                <label for="password" class="text-light"><i class="fas fa-key fa-fw text-light"></i> Password</label>
+                <input type="password">
+            </div>
+            <button class="btn">
+                <i class="fas fa-unlock fa-fw text-light"></i> logIn
+            </button>
+            <a href="#" class="reglink">Register Here</a>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

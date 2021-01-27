@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="one.jpg" alt="" id="img">
+    <button id="btn" onclick="changeFace()"> change</button>
+    <button id="btn_2" onclick="original()"> unchange</button>
+
+    <script>
+        let x = document.getElementById("img");
+        
+        function changeFace(){
+            x.src="ok.jpg";
+        }
+        function original(){
+            x.src="one.jpg";
+        }
+
+    </script> -->
+    <img src="one.jpg" alt="" id="img">
+    <button id="btn" onclick="change()">Change</button>
+
+    <script>
+       
+       function change(){
+           let x = document.getElementById("img");
+
+           let arr = x.src.split("/");
+           
+           if(arr[arr.length-1] == "one.jpg"){
+               x.src = "ok.jpg";
+           }else{
+               x.src = "one.jpg";
+           }
+       }
+
+    </script>
+</body>
+</html>

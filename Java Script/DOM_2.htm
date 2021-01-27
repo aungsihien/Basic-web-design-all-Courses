@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aung Aung Aung</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quis vel maiores error qui id illum necessitatibus autem facilis rerum, sed dicta porro temporibus, aut dolor, sequi neque soluta excepturi.
+
+    </p>
+    <a href="https://google.com" target="_blank">google</a>
+    <input type="text" value="">
+    
+    <button>click</button>
+
+    <script>
+        document.querySelector("button").onclick = function(){
+            let x = document.querySelector("input").value;
+
+            document.querySelector("a").innerHTML= x;
+            document.querySelector("input") = "";
+        }
+        
+    </script>
+</body>
+</html>

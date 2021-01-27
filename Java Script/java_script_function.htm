@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let name = "Aung Si Hein";
+        // let age = 26;
+        // let job = "Front_end developer"
+        // let myself = `I am ${name} , ${age} years old and I m ${job}`;
+
+        function myFun(){
+            return myself;
+        }
+        function myself2(name2 ,age2, job2){
+            let myself2 = `I am ${name2} , ${age2} years old and I m ${job2}`;
+            return myself2;
+        }
+
+        function calculate_birthday(nam , age3 , job3){
+            let bd_year = 2021- age3;
+            let myself3 = `I am ${nam} , ${age3}- --${bd_year} born years old and I m ${job3} `;
+            return myself3;
+        }
+        let nowYear = 2021;
+
+        function getBdyear(age = 20){ //default_parameter;
+            let bdyear = nowYear -age;
+            return  `You Born in ${bdyear}`;
+        }
+
+
+        function showResult(result){
+            return `Your input day is  ${result} in hours`;
+        }
+        function getTime(day){
+            let hour = day * 24;
+            return showResult(hour);
+        }
+    </script>
+</head>
+<body>
+    <html>
+        
+    </html>
+    
+</body>
+</html>

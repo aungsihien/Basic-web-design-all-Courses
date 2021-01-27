@@ -1,0 +1,45 @@
+
+<button onclick="change()"> click me</button>
+
+<script>
+
+    let change = ()=>{
+        alert("I get overwhlemd");
+        console.log("hi");
+    }
+    let obj = {
+        name: "Aung Si Hein",
+        skill: "wed development",
+        teach : function(){
+            console.log(`${obj.name} can teach ${obj.skill}`)
+        },
+        learn : ()=>{
+            console.log(`${obj.name} can learn ${obj.skill}`)
+        }
+    }
+    //Arrow Function
+    let one = ()=> console.log("this is arrow function");
+
+    //IIFE
+    (function (){
+        console.log("This is IIFE function");
+    })();
+    //two line Arrow Function
+    let two = () =>{
+        let x = "aungsihein";
+        console.log(`he is ${x}`);
+    }
+
+    //Arrow Function with parameter;
+    let three = x =>{
+        console.log(x);
+    }
+    //Arrow funtion with multiple parameter;
+
+    let four = (x , y = 1)=>{
+        console.log(x,y);
+    }
+
+    // document.querySelector("button").addEventListener("click",()=>console.log("this is five"));
+    //  document.querySelector("button").onclick = ()=> console.log("it is me");
+</script>

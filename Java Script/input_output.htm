@@ -1,0 +1,31 @@
+<script>
+    // window.alert("This is window output");
+    // document.write("This is document output");
+    // console.log("This is console output");
+
+
+     let x = window.prompt();
+    // document.write(x);
+
+    
+</script>
+<style>
+    .one{
+        margin-bottom:20px;
+    }
+ 
+</style>
+<div class="one">
+    <input type="text" id="test">
+    <button onclick="console.log(document.getElementById('test').value)"> click</button>
+</div>
+
+<div class="one">
+    <input type="text" id="test2">
+    <button onclick="document.write(document.getElementById('test2').value)">Submit</button>
+</div>
+
+<div class="one">
+    <input type="text" id="test3">
+    <button onclick="window.alert(document.getElementById('test3').value)">singup</button>
+</div>

@@ -1,0 +1,76 @@
+
+
+<input type="text" name="" id="test">
+<button id="btn" onclick="take()"> yes</button>
+<ul id="list">
+    <li>apple</li>
+    <li>orange</li>
+    <li>banana</li>
+</ul>
+
+
+
+
+<script>
+        function filter(x){
+            if (x){
+                if(x.length >= 3){
+                    return x;
+                }else{
+                    return false;
+                }
+            }else{
+                return false;
+            }
+        }
+      
+        function take(){
+            
+                let input  = document.getElementById("test");
+                let inputText = filter(input.value);
+                
+                    if(inputText){//-------> True Phyit tae time
+                        document.getElementById("list").innerHTML += `<li>${inputText}</li>`;
+                        input.value="";
+                    }
+                    
+                }
+                    
+                
+                    
+    
+                
+                
+        
+
+
+
+
+
+
+
+
+
+
+
+    function myage(age){
+        father_age = age +30;
+        return fatherage(father_age);
+    }
+    function fatherage(fage){
+        return `My father age is ${fage} because he is 30 years old more me`
+    }
+
+    let superhero = {
+        name : 'woderwoman',
+        age : 200,
+        skill : 'zeus daughter',
+        beauty : function(){
+            return `One of the superhero in DC is ${this.name} , her age is ${this.age} , born in  ${this.queen(this.age)}and her skill is ${this.skill}`
+        },
+        queen : function(age){
+            born_in = 2021 - this.age;
+            return born_in;
+        }
+    }
+</script>

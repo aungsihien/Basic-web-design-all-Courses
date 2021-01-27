@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: cyan;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .main{
+            background-color: blue;
+            width:300px;
+            border-radius: 20px;
+            margin:50px auto;
+        }
+        .todo{
+            padding:10px;
+            
+        }
+        .list{
+            
+            background-color: rgb(255, 255, 255);
+            border-radius:20px;
+            padding:10px;
+            margin:0;
+        }
+
+        .list-item{
+            list-style-type: none;
+            margin: px;
+            color: #fefefe;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #7777dd;
+            
+            margin-bottom: 10px;
+            border-radius: 20px;
+            text-align: center;
+
+        }
+        .list-item span{
+            display: block;
+            width: 50px;
+        }
+        .list-item:hover{
+            background-color: rgb(228, 219, 219);
+        }
+        .add-box{
+            margin: 20px 10px;
+           
+          
+        }
+        .title{
+            margin: 10px 0;
+            color:white;
+        }
+        .input{
+            background-color: blue;
+            border:1px solid blue;
+            color:pink;
+            padding: 10px 0;
+            flex-grow: 2;
+        }
+        .input:focus{
+            outline:none;
+        }
+        .btn-add{
+            background-color: blue;
+            color: white;
+            border:1px solid blue;
+            border:0px;
+            outline:none;
+            /* margin-left: 60px; */
+        }
+        
+        .add-icon{
+            font-size: 80px;
+           
+        }
+        .input-area{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 10px 10px 10px;
+        }
+        
+        
+    </style>
+</head>
+    
+<body>
+    <div class="main">
+        <div class="todo">
+            <div class="add-box" id="addBox">
+                <div class="input-area">
+                    <div class="">
+                        <h1 class="title"> To Do List</h1>
+                        <input type="text" class="input" id="input" placeholder="Say Something......">
+                    </div>
+                    <button id="addBtn" class="btn-add" onclick="addList()"><i class="fas fa-plus-circle add-icon"></i></button>
+
+                </div>
+
+            </div>
+
+            </div>
+            <ul class="list" id="list">
+                
+            </ul>
+            
+
+    </div>
+    <script>
+        let i =1 ;
+        let textFilter = (x)=>{
+            if(x){
+                if(x.length >3){
+                    return x;
+                }else{
+                    alert("Min length is 3");
+                }
+            }else{
+                alert("Enter something");
+               
+            }
+        }
+
+        let addList = () =>{
+
+            let input = textFilter(document.getElementById("input").value);
+            if(input){
+                showList(input);
+                 document.getElementById("input").value= "";
+            }
+            
+        }
+        let showList = (text)=>{
+            document.getElementById("list").innerHTML += `
+            <li class="list-item" id="list${i}"> 
+            <span id="listText${i}">
+                ${text}
+                
+            </span>
+            <div class="list-btn-group">
+                <button class="btn-del" onclick="deleteList(${i})"><i class="far fa-trash-alt fa-1x"></i></button>
+                <button class="btn-edit" onclick="editList(${i})"><i class="fas fa-edit fa-1x"></i></button>
+            </div>
+         
+          </li>
+            `
+        }
+
+    </script>
+</body>
+</html>

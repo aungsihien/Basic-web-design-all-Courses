@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            width:255px;
+            border:2px solid black;
+            padding:10px;
+            
+        }
+        input{
+            width: 200px;
+            height: 20px;
+            margin-bottom:20px;
+        }
+        button{
+            height:20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="result">Text</h1>
+    <div>
+        <input type="text" id="test">
+        <button id="btn_1">set Text</button>
+    </div>
+    <div>
+        <input type="color" id="color" onchange="tanChange()">
+        <button id="btn_2">set Text</button>
+    </div>
+    <div>
+        <input type="number" id="fontSize">
+        <button id="btn_3" onclick="changeFont()">set Text</button>
+    </div>
+
+    <script>
+        document.getElementById("btn_1").onclick = function(){
+            let x = document.getElementById("test").value;
+            document.getElementById("result").innerHTML = x;
+            document.getElementById("test").value = "";
+            console.log(`Change Text to ${x}`);
+        }
+
+        document.getElementById("btn_2").addEventListener("click" , function(){
+           let x =  document.getElementById("color").value;
+           document.getElementById("result").style.color = x;
+           console.log(`Change color to ${x}`);
+        })
+        function changeFont(){
+            let x = document.getElementById("fontSize").value;
+            document.getElementById("result").style.fontSize = x+ "px";
+            document.getElementById("fontSize").value = "";
+            console.log(`Change font to ${x}`);
+        }
+
+        function tanChange(){
+            let x= document.getElementById("color").value;
+            document.getElementById("result").style.backgroundColor = x;
+        }
+
+        
+    </script>
+    
+    
+</body>
+</html>

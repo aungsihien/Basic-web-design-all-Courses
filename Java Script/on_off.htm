@@ -1,0 +1,26 @@
+
+<style>
+    img{
+        width: 200px;
+        height: 200px;
+    }
+</style>
+<img src="one.jpg" alt="" id="img">
+<button id="btn" onclick="change()">Change
+</button>
+
+<script>
+    let change = () =>{
+        let x = document.getElementById("img");
+        
+        let arr = x.src.split('/');
+        
+        if(arr[arr.length -1] == "one.jpg"){
+            x.src = "ok.jpg";
+        }else{
+            x.src = "one.jpg";
+        }
+    }
+    
+
+</script>
